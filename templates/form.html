@@ -1,0 +1,45 @@
+<!--https://pythonspot.com/flask-web-forms/-->
+<title>Flask-Cassandra-Wikipedia</title>
+<link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+<br><br>
+<h2>Ask Wikipedia!</h2>
+<form action="" method="post" role="form">
+    {{ form.csrf }}
+<div class="form-group">
+      <label for="name">Query:</label>
+<input type="text" class="form-control" id="name" name="name" placeholder="What's your query?"></div>
+<button type="submit" class="btn btn-success">Submit</button>
+</form>{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+
+{% for message in messages %}
+{% if "Error" not in message[1]: %}
+<div class="alert alert-info">
+                <strong>Result: </strong> {{ message[1] }}</div>
+{% endif %}
+
+{% if "Error" in message[1]: %}
+<div class="alert alert-warning">{{ message[1] }}</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endwith %}
+   <!--   <table>
+         <thead>
+            <tr>
+               <th>Summaries</th>
+
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for query in wiki %}
+               <tr>
+                  <td><br>{{ query.name }}<br></td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table> -->
+</div>

@@ -1,0 +1,15 @@
+pip==10.0.1
+Click==7.0
+Jinja2==2.10
+Flask==1.0.2
+MarkupSafe==1.1.1
+WTForms==2.2.1
+certifi==2019.3.9
+chardet==3.0.4
+idna==2.8
+itsdangerous==1.1.0
+Werkzeug==0.15.1
+requests==2.21.0
+setuptools==39.1.0
+urllib3==1.24.1
+cassandra-driver==3.17.0
