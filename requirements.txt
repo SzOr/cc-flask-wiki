@@ -11,5 +11,5 @@ itsdangerous==1.1.0
 Werkzeug==0.15.1
 requests==2.21.0
 setuptools==39.1.0
-urllib3==1.24.1
+urllib3==1.26.5
 cassandra-driver==3.17.0
